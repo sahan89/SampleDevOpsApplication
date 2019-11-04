@@ -18,10 +18,6 @@ pipeline {
             steps {
                 //checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[url: 'https://github.com/sahan89/SampleDevOpsApplication.git']]])
                 echo pwd
-                sh "cd home/sahan/"
-                mkdir SampleDevOpsApplication
-                sh "cd SampleDevOpsApplication"
-                echo pwd
                 echo "######### Checkout Stage Done #########"
             }
         }
