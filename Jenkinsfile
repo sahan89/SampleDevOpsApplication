@@ -20,7 +20,7 @@ pipeline {
                 echo pwd
                 sh "cd home/sahan/"
                 mkdir SampleDevOpsApplication
-                cd SampleDevOpsApplication
+                sh "cd SampleDevOpsApplication"
                 echo pwd
                 echo "######### Checkout Stage Done #########"
             }
