@@ -18,8 +18,6 @@ pipeline {
             steps {
                 checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[url: 'https://github.com/sahan89/SampleDevOpsApplication.git']]])
                 echo pwd
-                cd /var/jenkins_home/gitClone/SampleDevOpsApplication
-                echo pwd
                 echo "######### Checkout Stage Done #########"
             }
         }
@@ -39,7 +37,9 @@ pipeline {
 
 	stage ('Deployment Stage') {
             steps {
-                 echo "######### Deployment Stage Done #########"
+                sh "cd /var/jenkins_home/gitClone/SampleDevOpsApplication"
+                echo pwd
+                echo "######### Deployment Stage Done #########"
 		    }
        }
     }
