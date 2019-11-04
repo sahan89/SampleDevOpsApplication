@@ -35,13 +35,12 @@ pipeline {
             }
         }
 
-	stage ('Deployment Stage') {
+	stage ('Build Docker Image Stage') {
             steps {
-            dir("/var/jenkins_home/gitClone/SampleDevOpsApplication") {
+                dir("/var/jenkins_home/gitClone/SampleDevOpsApplication") {
                 sh "pwd"
-            }
-                //sh "cd /var/jenkins_home/gitClone/SampleDevOpsApplication"
-                //echo pwd
+                docker build -t sample_devops_app .
+                }
                 echo "######### Deployment Stage Done #########"
 		    }
        }
