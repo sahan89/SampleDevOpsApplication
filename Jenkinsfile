@@ -8,9 +8,9 @@ pipeline {
      stages {
          stage ('Initialize') {
             steps {
-                    echo "PATH = ${PATH}"
-                    echo "M2_HOME = ${M2_HOME}"
-		    echo "######### Initialize Stage Done #########"
+                echo "PATH = ${PATH}"
+                echo "M2_HOME = ${M2_HOME}"
+		        echo "######### Initialize Stage Done #########"
             }
         }
 
@@ -37,7 +37,7 @@ pipeline {
 
 	stage ('Deployment Stage') {
             steps {
-                sh "cd /var/jenkins_home/gitClone/SampleDevOpsApplication"
+                sh "cd \var\jenkins_home\gitClone\SampleDevOpsApplication"
                 echo pwd
                 echo "######### Deployment Stage Done #########"
 		    }
