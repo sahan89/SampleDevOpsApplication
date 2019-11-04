@@ -16,15 +16,19 @@ pipeline {
 
         stage ('Checkout Stage') {
             steps {
-                checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[url: 'https://github.com/sahan89/SampleDevOpsApplication.git']]])
+                #checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[url: 'https://github.com/sahan89/SampleDevOpsApplication.git']]])
+                echo pwd
+                cd home/sahan/
+                mkdir SampleDevOpsApplication
+                cd SampleDevOpsApplication
                 echo pwd
                 echo "######### Checkout Stage Done #########"
             }
         }
 
 	stage ('Build Stage') {
-	    steps {
-		sh 'mvn clean install -DskipTests'
+	        steps {
+		        sh 'mvn clean install -DskipTests'
                 echo "######### Build Stage Done #########"
             }
 		}
