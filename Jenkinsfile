@@ -37,8 +37,11 @@ pipeline {
 
 	stage ('Deployment Stage') {
             steps {
-                cd "/var/jenkins_home/gitClone/SampleDevOpsApplication"
-                echo pwd
+            dir("/var/jenkins_home/gitClone/SampleDevOpsApplication") {
+                sh "pwd"
+            }
+                //sh "cd /var/jenkins_home/gitClone/SampleDevOpsApplication"
+                //echo pwd
                 echo "######### Deployment Stage Done #########"
 		    }
        }
