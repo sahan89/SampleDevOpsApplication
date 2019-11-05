@@ -5,7 +5,7 @@ spring:
 #    url: jdbc:mysql://localhost:3306/sample_devops_db?createDatabaseIfNotExist=true
     url: jdbc:mysql://172.17.0.3:3306/sample_devops_db?createDatabaseIfNotExist=true
     username: root
-    password: 1qaz2wsx#EDC
+    password: root
     driver-class-name: com.mysql.cj.jdbc.Driver
   jpa:
     hibernate:
