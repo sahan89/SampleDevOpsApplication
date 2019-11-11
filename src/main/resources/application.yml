@@ -6,7 +6,8 @@ spring:
     url: jdbc:mysql://13.74.240.252:3306/sample_devops_db?createDatabaseIfNotExist=true
     username: root
     password: PASSWORD
-    driver-class-name: com.mysql.cj.jdbc.Driver
+#    driver-class-name: com.mysql.cj.jdbc.Driver
+    driver-class-name: com.mysql.jdbc.Driver
   jpa:
     hibernate:
       ddl-auto: update
