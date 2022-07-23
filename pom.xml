@@ -85,5 +85,6 @@
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
         </plugins>
+        <finalName>sample-devops-application</finalName>
     </build>
 </project>

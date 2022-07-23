@@ -28,9 +28,9 @@ jobs:
     - name: Build & push Docker image
     - uses: mr-smithers-excellent/docker-build-push@v5
       with:
-        image: sahan89/springboot-github-actions
+        image: sahan89/sample-devops-application
         tags: v1, latest
         registry: docker.io
-        dockerfile: Dockerfile.ci
+        dockerfile: Dockerfile
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PASSWORD }}
